@@ -1,9 +1,11 @@
-package com.example.web.model;
+package com.example.web.model.results;
 
 import com.example.web.enums.ErrorMsgEnum;
+import com.example.web.model.errors.ErrorMsg;
 import org.apache.skywalking.apm.toolkit.trace.TraceContext;
 import java.io.Serializable;
 
+// 用来包装所有返回的结果
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
     private Boolean success;

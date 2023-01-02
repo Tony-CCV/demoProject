@@ -1,7 +1,7 @@
 package com.example.web.manager;
 
-import com.example.web.model.LoginResTO;
-import com.example.web.model.RegisterResTO;
+import com.example.web.model.tokens.LoginResTO;
+import com.example.web.model.tokens.RegisterResTO;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,7 +1,8 @@
 package com.example.web.enums;
 
-import com.example.web.model.ErrorMsg;
+import com.example.web.model.errors.ErrorMsg;
 
+// 用来返回所有错误状态的enum类
 public enum ErrorMsgEnum implements ErrorMsg {
 
     PASSWORD_OR_ACCOUNT_ERROR("PASSWORD_OR_ACCOUNT_ERROR","用户名或密码错误"),
