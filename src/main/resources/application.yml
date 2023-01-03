@@ -1,0 +1,17 @@
+server:
+    port: 8080
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/information
+        username: root
+        password: asdzx123
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    jpa:
+        generate-ddl: false
+        show-sql: false
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        hibernate:
+            ddl-auto: update
