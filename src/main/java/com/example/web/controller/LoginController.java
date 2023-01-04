@@ -8,21 +8,30 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 @RestController
 public class LoginController {
 
-    @Autowired
+    @Resource
     LoginManager loginManager;
 
-
     @GetMapping("/login")
-    public Result<UserDO> checkUserAndPsw(@RequestBody LoginReqTO loginReqTO) {
-        return new Result(loginManager.checkUserAndPsw(loginReqTO));
+    public Result<String> checkUserAndPsw(@RequestBody LoginReqTO loginReqTO){
+        loginManager.checkUserAndPsw(loginReqTO);
+        return Result.success();
     }
 
     @GetMapping("/Register")
-    public Result<RegisterResTO> registerSuccess(@RequestBody RegisterReqTO registerReqTO){
-        return new Result(loginManager.registerSuccess(registerReqTO));
+    public Result<String> register(@RequestBody RegisterReqTO registerReqTO){
+        loginManager.register(registerReqTO);
+        return Result.success();
+    }
+
+    @GetMapping("/modify")
+    public Result<String> modify(){
+        // TODO: 2023/1/4
+        return Result.success();
     }
 
 }
